@@ -1,4 +1,4 @@
-dnf module disable mysql -y
+dnf install mysql-server -y
 
 systemctl enable mysqld
 systemctl start mysqld
