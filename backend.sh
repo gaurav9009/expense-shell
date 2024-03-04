@@ -8,10 +8,11 @@ dnf install nodejs -y
 useradd expense
 cp backend.service /etc/systemd/system/backend.service
 
-#Lets setup an app directory.
+#Lets setup an app directory. Remove any old one
 rm -rf /app
 mkdir /app
 
+#Download the application code to created app directory.
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
 cd /app
 
@@ -20,8 +21,6 @@ unzip /tmp/backend.zip
 
 cd /app
 npm install
-
-
 
 
 systemctl daemon-reload
