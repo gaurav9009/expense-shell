@@ -6,7 +6,7 @@ dnf install nginx -y
 systemctl enable nginx
 systemctl start nginx
 
-#Copy expense config file to the right place
+#Copy expense config file to the right place....
  cp expense.conf etc/nginx/default.d/expense.conf
 
  #Remove the old content
